@@ -79,8 +79,7 @@ Unavailable
 
 Three sections, in this order: what you can take here, what you can take but finish somewhere
 else, and what you cannot take. The first is headed with **the instance's own name**, in the
-language of the player's client, so the menu says where you are without spending a row on a
-title. A section with nothing in it is left out, heading included.
+language of the player's client. A section with nothing in it is left out, heading included.
 
 Inside a section the quests are ordered by level, except in `Unavailable`, where they are
 grouped **by the reason** first and by level second.
@@ -168,8 +167,7 @@ ENFORCE = {
 The point of the module is that you walk in and take the whole instance in one go, so the
 chain switches are **off** by default: you are offered the end of a chain without having done
 the steps before it. `previousQuest`, `nextChain`, `prevChain` and `breadcrumb` put those
-rules back. The rest are the requirements the core itself enforces, so turning one off means
-the giver offers a quest the server would refuse — leave them on unless you have a reason.
+rules back.
 
 ### `Config.OFFER` / `Config.HIDE` — which kinds of quest
 
