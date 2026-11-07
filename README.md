@@ -60,11 +60,6 @@ on first use).
 The SQL is safe to run more than once. It deletes its own rows before writing them, so
 re-importing after an edit is the normal way to change things.
 
-If the import complains about `Unknown column 'id'`, your `creature` table is a current
-AzerothCore one and calls that column `id1`: replace `` `id` `` with `` `id1` `` in the
-`creature` inserts of `dungeon-quest.sql`, and set `CREATURE_ID_COLUMN = "id1"` in the
-module's settings.
-
 ## The start menu
 
 ```
