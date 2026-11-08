@@ -50,9 +50,19 @@ local Config = {
 
     },
 
-    -- true  list every quest, with the reason in brackets
-    -- false list only what you can take
-    SHOW_UNAVAILABLE = false,
+    -- Which quests you cannot take earn a row in the menu, with the reason
+    -- in brackets.  true = all of them, false = none, and a table names the
+    -- ones to leave out - by gate, the same names as ENFORCE above:
+    --
+    --     SHOW_UNAVAILABLE = { race = false, class = false }
+    --
+    -- leaves out everything your race or class rules out and still lists
+    -- what you are too low level for.  A gate you do not name stays shown,
+    -- so the table is a list of exceptions, not a list of what to keep.
+    -- The quest states (inLog, ready, done, failed) and the kinds switched
+    -- off in OFFER (escort, attunement, ...) work the same way.
+    -- SHOW_UNAVAILABLE = true,
+    SHOW_UNAVAILABLE = { race = false, class = false , skill = false , reputation = false},
 
     -- "Take every available quest (n)" as the first row of the menu.
     SHOW_TAKE_ALL = true,
@@ -732,8 +742,9 @@ local function GroupTitles(player, group)
     return table.concat(names, ", ")
 end
 
--- nil when the player may take the quest, otherwise the reason, shown
--- in brackets after the title.
+-- nil when the player may take the quest, otherwise the reason, shown in
+-- brackets after the title, and the name of the gate behind it - which is
+-- what Config.SHOW_UNAVAILABLE is keyed by.
 local function Gate(player, qid)
     local q = ATTR and ATTR[qid]
     if not q then
@@ -743,39 +754,39 @@ local function Gate(player, qid)
     local E = Config.ENFORCE
 
     if E.minLevel and q.m and q.m > 0 and player:GetLevel() < q.m then
-        return "lvl " .. q.m
+        return "lvl " .. q.m, "minLevel"
     end
     if E.maxLevel and q.M and q.M > 0 and player:GetLevel() > q.M then
-        return "max lvl " .. q.M
+        return "max lvl " .. q.M, "maxLevel"
     end
 
     if E.race and q.r and q.r > 0
             and not HasBit(q.r, player:GetRace() - 1) then
-        return OnlyFor(q.r, RACE_NAMES, "another race")
+        return OnlyFor(q.r, RACE_NAMES, "another race"), "race"
     end
     if E.class and q.c and q.c > 0
             and not HasBit(q.c, player:GetClass() - 1) then
-        return OnlyFor(q.c, CLASS_NAMES, "another class")
+        return OnlyFor(q.c, CLASS_NAMES, "another class"), "class"
     end
 
     if E.reputation then
         if q.rm and q.rm[1] and q.rm[1] > 0
                 and player:GetReputation(q.rm[1]) < q.rm[2] then
-            return "rep too low"
+            return "rep too low", "reputation"
         end
         if q.rx and q.rx[1] and q.rx[1] > 0
                 and player:GetReputation(q.rx[1]) >= q.rx[2] then
-            return "rep too high"
+            return "rep too high", "reputation"
         end
         if q.r2 and q.r2[1] and q.r2[1] > 0
                 and player:GetReputation(q.r2[1]) >= q.r2[2] then
-            return "rep too high"
+            return "rep too high", "reputation"
         end
     end
 
     if E.skill and q.s and q.s[1] and q.s[1] > 0
             and player:GetSkillValue(q.s[1]) < (q.s[2] or 0) then
-        return "needs skill"
+        return "needs skill", "skill"
     end
 
     if E.previousQuest and q.p and q.p ~= 0 then
@@ -784,11 +795,11 @@ local function Gate(player, qid)
         if q.p > 0 then
 
             if status ~= QUEST_STATUS_REWARDED then
-                return "needs " .. Title(player, prev)
+                return "needs " .. Title(player, prev), "previousQuest"
             end
         elseif status == QUEST_STATUS_NONE then
 
-            return "needs " .. Title(player, prev)
+            return "needs " .. Title(player, prev), "previousQuest"
         end
     end
 
@@ -802,27 +813,30 @@ local function Gate(player, qid)
         end
         if not done then
             return "needs one: " .. (GroupTitles(player, q.g)
-                                        or "this quest group")
+                                        or "this quest group"),
+                   "requiredGroup"
         end
     end
 
     if E.exclusiveGroup and q.g and q.g > 0 then
         for _, other in ipairs(GROUPS[q.g] or {}) do
             if other ~= qid and player:GetQuestStatus(other) ~= QUEST_STATUS_NONE then
-                return "conflicts: " .. Title(player, other)
+                return "conflicts: " .. Title(player, other),
+                       "exclusiveGroup"
             end
         end
     end
 
     if E.nextChain and q.x and q.x > 0
             and player:GetQuestStatus(q.x) ~= QUEST_STATUS_NONE then
-        return "follow-up: " .. Title(player, q.x)
+        return "follow-up: " .. Title(player, q.x), "nextChain"
     end
 
     if E.prevChain then
         for _, prev in ipairs(PREV_CHAIN[qid] or {}) do
             if player:GetQuestStatus(prev) ~= QUEST_STATUS_NONE then
-                return "finish " .. Title(player, prev) .. " first"
+                return "finish " .. Title(player, prev) .. " first",
+                       "prevChain"
             end
         end
     end
@@ -831,7 +845,7 @@ local function Gate(player, qid)
 
         if q.b and q.b > 0
                 and player:GetQuestStatus(q.b) ~= QUEST_STATUS_NONE then
-            return "superseded: " .. Title(player, q.b)
+            return "superseded: " .. Title(player, q.b), "breadcrumb"
         end
 
         for _, crumb in ipairs(BREADCRUMBS[qid] or {}) do
@@ -839,7 +853,8 @@ local function Gate(player, qid)
             if status == QUEST_STATUS_INCOMPLETE
                     or status == QUEST_STATUS_COMPLETE
                     or status == QUEST_STATUS_FAILED then
-                return "breadcrumb: " .. Title(player, crumb)
+                return "breadcrumb: " .. Title(player, crumb),
+                       "breadcrumb"
             end
         end
     end
@@ -980,15 +995,17 @@ end
 -- nil        offer it
 -- "hidden"   leave it out of the menu (Config.HIDE)
 -- "reason"   list it greyed out (Config.OFFER = false)
+-- nil = offer it, "hidden" = leave it out, otherwise the reason to show;
+-- the second value is the kind's name either way
 local function TypeVerdict(qid)
     local tags = QuestTags(qid)
     for _, name in ipairs(TYPE_ORDER) do
         if tags[name] then
             if Config.HIDE and Config.HIDE[name] then
-                return "hidden"
+                return "hidden", name
             end
             if Config.OFFER and Config.OFFER[name] == false then
-                return TYPE_LABEL[name] or name
+                return TYPE_LABEL[name] or name, name
             end
         end
     end
@@ -1246,28 +1263,31 @@ local function BuildStartList(player, dungeon, dungeonId)
         if section and Config.HIDE and Config.HIDE[section] then
             hidden = hidden + 1
         else
-            local verdict = TypeVerdict(qid)
+            local verdict, kind = TypeVerdict(qid)
             if section and Config.OFFER and Config.OFFER[section] == false then
-                verdict = TYPE_LABEL[section]
+                verdict, kind = TYPE_LABEL[section], section
                 section = nil
             end
             if verdict == "hidden" then
                 hidden = hidden + 1
             else
                 local status = player:GetQuestStatus(qid)
-                local reason
+                local reason, gate
                 if status == QUEST_STATUS_NONE then
-                    reason = Gate(player, qid) or verdict
+                    reason, gate = Gate(player, qid)
+                    if not reason then
+                        reason, gate = verdict, kind
+                    end
                 elseif status == QUEST_STATUS_REWARDED then
-                    reason = "done"
+                    reason, gate = "done", "done"
                 elseif status == QUEST_STATUS_COMPLETE then
-                    reason = "ready"
+                    reason, gate = "ready", "ready"
                 elseif status == QUEST_STATUS_FAILED then
-                    reason = "failed"
+                    reason, gate = "failed", "failed"
                 else
-                    reason = "in log"
+                    reason, gate = "in log", "inLog"
                 end
-                list[#list + 1] = { qid = qid, locked = reason,
+                list[#list + 1] = { qid = qid, locked = reason, gate = gate,
                                     section = section }
             end
         end
@@ -1282,6 +1302,15 @@ local function CountTakeable(list)
         if not e.locked then n = n + 1 end
     end
     return n
+end
+
+-- whether a quest out of reach still gets a row, from Config.SHOW_UNAVAILABLE
+local function Shown(gate)
+    local show = Config.SHOW_UNAVAILABLE
+    if type(show) == "table" then
+        return show[gate] ~= false
+    end
+    return show ~= false
 end
 
 -- a section heading: a row that does nothing when it is clicked
@@ -1308,10 +1337,10 @@ local function ShowStartMenu(player, creature, dungeon, dungeonId, page)
     end
 
     local available, elsewhere, unavailable = {}, {}, {}
-    local plevel = player:GetLevel()
+    local plevel, skipped = player:GetLevel(), 0
 
     for index, e in ipairs(list) do
-        if not e.locked or Config.SHOW_UNAVAILABLE then
+        if not e.locked or Shown(e.gate) then
             local lvl = QuestLevelOf(e.qid)
             local text
             if e.locked then
@@ -1334,7 +1363,14 @@ local function ShowStartMenu(player, creature, dungeon, dungeonId, page)
             else
                 available[#available + 1] = row
             end
+        else
+            skipped = skipped + 1
         end
+    end
+
+    if skipped > 0 then
+        Debug("%d quest%s of %s are hidden by SHOW_UNAVAILABLE", skipped,
+              skipped == 1 and "" or "s", dungeon.name or "this dungeon")
     end
 
     local entries = {}
