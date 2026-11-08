@@ -52,7 +52,7 @@ local Config = {
 
     -- true  list every quest, with the reason in brackets
     -- false list only what you can take
-    SHOW_UNAVAILABLE = true,
+    SHOW_UNAVAILABLE = false,
 
     -- "Take every available quest (n)" as the first row of the menu.
     SHOW_TAKE_ALL = true,

@@ -194,7 +194,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 21, @GIVER + 2, 230, 0, 0, 1, 1, 0, 441.683, 20.376, -70.653, 5.858, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Blackrock Depths'),
-(@GUID + 22, @ENDER + 2, 230, 0, 0, 1, 1, 0, 1349.8, -806.159, -85.069, 5.585, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackrock Depths, check position in-game');
+(@GUID + 22, @ENDER + 2, 230, 0, 0, 1, 1, 0, 1358.2495, -807.4423, -85.15223, 2.46855, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackrock Depths, check position in-game');
 
 DROP TEMPORARY TABLE IF EXISTS `tmp_dungeon_quest_theme`;
 CREATE TEMPORARY TABLE `tmp_dungeon_quest_theme` (`npc` INT UNSIGNED NOT NULL, `theme` INT UNSIGNED NOT NULL);
@@ -211,7 +211,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 2;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 620, @PORTAL + 2, 230, 0, 0, 1, 1, 1347.872, -808.457, -86.819, 5.585, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackrock Depths');
+(@GUID + 620, @PORTAL + 2, 230, 0, 0, 1, 1, 1360.120, -805.097, -85.152, 2.469, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackrock Depths');
 
 -- -------------------------------------------------------------------------
 -- Wailing Caverns   -   dungeon 14
@@ -249,7 +249,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 14;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 740, @PORTAL + 14, 43, 0, 0, 1, 1, 123.555, 242.594, -95.771, 3.089, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Wailing Caverns');
+(@GUID + 740, @PORTAL + 14, 43, 0, 0, 1, 1, 123.555, 242.594, -94.021, 3.089, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Wailing Caverns');
 
 -- -------------------------------------------------------------------------
 -- Ragefire Chasm   -   dungeon 15
@@ -270,7 +270,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 151, @GIVER + 15, 389, 0, 0, 1, 1, 0, -3.069, -19.276, -19.197, 1.349, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Ragefire Chasm'),
-(@GUID + 152, @ENDER + 15, 389, 0, 0, 1, 1, 0, -237.486, 140.866, -18.737, 2.391, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Ragefire Chasm');
+(@GUID + 152, @ENDER + 15, 389, 0, 0, 1, 1, 0, -391.9634, 139.10864, 7.738529, 1.306379, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Ragefire Chasm');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 15, 11833), -- Rahauro
@@ -285,7 +285,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 15;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 750, @PORTAL + 15, 389, 0, 0, 1, 1, -235.440, 143.060, -20.487, 2.391, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Ragefire Chasm');
+(@GUID + 750, @PORTAL + 15, 389, 0, 0, 1, 1, -389.068, 138.325, 7.739, 1.306, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Ragefire Chasm');
 
 -- -------------------------------------------------------------------------
 -- Shadowfang Keep   -   dungeon 16
@@ -319,7 +319,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 16;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 760, @PORTAL + 16, 33, 0, 0, 1, 1, -100.343, 2162.519, 143.171, 4.870, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Shadowfang Keep');
+(@GUID + 760, @PORTAL + 16, 33, 0, 0, 1, 1, -100.343, 2162.519, 144.921, 4.870, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Shadowfang Keep');
 
 -- -------------------------------------------------------------------------
 -- Blackfathom Deeps   -   dungeon 17
@@ -346,7 +346,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 171, @GIVER + 17, 48, 0, 0, 1, 1, 0, -155.757, 107.471, -40.006, 0.014, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Blackfathom Deeps'),
-(@GUID + 172, @ENDER + 17, 48, 0, 0, 1, 1, 0, -871.991, -457.112, -34.591, 0.189, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackfathom Deeps');
+(@GUID + 172, @ENDER + 17, 48, 0, 0, 1, 1, 0, -855.17126, -478.2714, -34.012196, 1.215622, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackfathom Deeps');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 17, 12736), -- Jeneu Sancrea
@@ -361,7 +361,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 17;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 770, @PORTAL + 17, 48, 0, 0, 1, 1, -871.427, -460.059, -36.341, 0.189, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackfathom Deeps');
+(@GUID + 770, @PORTAL + 17, 48, 0, 0, 1, 1, -852.359, -479.315, -34.012, 1.216, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackfathom Deeps');
 
 -- -------------------------------------------------------------------------
 -- Razorfen Kraul   -   dungeon 18
@@ -384,7 +384,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 181, @GIVER + 18, 47, 0, 0, 1, 1, 0, 1943.569, 1547.576, 82.0, 4.522, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Razorfen Kraul'),
-(@GUID + 182, @ENDER + 18, 47, 0, 0, 1, 1, 0, 2188.874, 1856.437, 79.139, 1.379, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Razorfen Kraul, check position in-game');
+(@GUID + 182, @ENDER + 18, 47, 0, 0, 1, 1, 0, 2179.6938, 1886.0841, 72.400566, 0.941605, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Razorfen Kraul');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 18, 4048), -- Falfindel Waywarder
@@ -399,7 +399,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 18;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 780, @PORTAL + 18, 47, 0, 0, 1, 1, 2191.819, 1855.865, 77.389, 1.379, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Razorfen Kraul');
+(@GUID + 780, @PORTAL + 18, 47, 0, 0, 1, 1, 2182.119, 1884.319, 72.401, 0.942, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Razorfen Kraul');
 
 -- -------------------------------------------------------------------------
 -- Gnomeregan   -   dungeon 19
@@ -453,7 +453,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 19;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 790, @PORTAL + 19, 90, 0, 0, 1, 1, -573.393, 639.605, -329.033, 1.488, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Gnomeregan');
+(@GUID + 790, @PORTAL + 19, 90, 0, 0, 1, 1, -573.393, 639.605, -327.283, 1.488, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Gnomeregan');
 
 -- -------------------------------------------------------------------------
 -- Razorfen Downs   -   dungeon 20
@@ -476,7 +476,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 201, @GIVER + 20, 129, 0, 0, 1, 1, 0, 2592.633, 1104.501, 51.29, 1.598, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Razorfen Downs'),
-(@GUID + 202, @ENDER + 20, 129, 0, 0, 1, 1, 0, 2392.46, 933.458, 53.164, 1.193, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Razorfen Downs, check position in-game');
+(@GUID + 202, @ENDER + 20, 129, 0, 0, 1, 1, 0, 2380.8953, 951.7629, 55.34347, 0.848012, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Razorfen Downs, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 20, 2308), -- Andrew Brownell
@@ -491,7 +491,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 20;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 800, @PORTAL + 20, 129, 0, 0, 1, 1, 2395.248, 932.351, 51.414, 1.193, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Razorfen Downs');
+(@GUID + 800, @PORTAL + 20, 129, 0, 0, 1, 1, 2383.145, 949.778, 55.343, 0.848, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Razorfen Downs');
 
 -- -------------------------------------------------------------------------
 -- The Deadmines   -   dungeon 21
@@ -510,8 +510,8 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 (@ENDER + 21, 2040); -- Underground Assault
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
-(@GUID + 211, @GIVER + 21, 36, 0, 0, 1, 1, 0, -17.256, -380.195, 61.78, 5.002, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Deadmines'),
-(@GUID + 212, @ENDER + 21, 36, 0, 0, 1, 1, 0, -78.279, -824.784, 40.001, 2.648, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Deadmines, check position in-game');
+(@GUID + 211, @GIVER + 21, 36, 0, 0, 1, 1, 0, -19.578678, -377.40036, 60.81927, 5.296197, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Deadmines'),
+(@GUID + 212, @ENDER + 21, 36, 0, 0, 1, 1, 0, -72.283676, -834.29755, 40.482197, 0.798052, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Deadmines, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 21, 234), -- Gryan Stoutmantle
@@ -526,7 +526,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 21;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 810, @PORTAL + 21, 36, 0, 0, 1, 1, -76.858, -822.142, 38.251, 2.648, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Deadmines');
+(@GUID + 810, @PORTAL + 21, 36, 0, 0, 1, 1, -70.136, -836.392, 40.482, 0.798, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Deadmines');
 
 -- -------------------------------------------------------------------------
 -- The Stockade   -   dungeon 22
@@ -546,7 +546,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 221, @GIVER + 22, 34, 0, 0, 1, 1, 0, 57.229, 0.21, -18.34, 3.118, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Stockade'),
-(@GUID + 222, @ENDER + 22, 34, 0, 0, 1, 1, 0, 95.368, -128.729, -33.94, 4.095, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Stockade, check position in-game');
+(@GUID + 222, @ENDER + 22, 34, 0, 0, 1, 1, 0, 82.28181, -141.88177, -33.93956, 0.750494, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Stockade, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 22, 1719), -- Warden Thelwater
@@ -561,7 +561,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 22;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 820, @PORTAL + 22, 34, 0, 0, 1, 1, 92.922, -126.992, -35.690, 4.095, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Stockade');
+(@GUID + 820, @PORTAL + 22, 34, 0, 0, 1, 1, 84.328, -144.076, -33.940, 0.750, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Stockade');
 
 -- -------------------------------------------------------------------------
 -- Scarlet Monastery   -   dungeon 23
@@ -586,10 +586,10 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `p
 (@GUID + 232, @GIVER + 23, 189, 0, 0, 1, 1, 0, 858.683, 1321.505, 18.671, 3.143, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Scarlet Monastery'),
 (@GUID + 233, @GIVER + 23, 189, 0, 0, 1, 1, 0, 1613.83, -323.442, 18.674, 3.139, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Scarlet Monastery'),
 (@GUID + 234, @GIVER + 23, 189, 0, 0, 1, 1, 0, 258.346, -209.14, 18.677, 3.125, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Scarlet Monastery'),
-(@GUID + 235, @ENDER + 23, 189, 0, 0, 1, 1, 0, 1828.339, 1416.85, -7.917, 3.159, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery, check position in-game'),
-(@GUID + 236, @ENDER + 23, 189, 0, 0, 1, 1, 0, 173.965, -427.5, 18.616, 3.188, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery, check position in-game'),
-(@GUID + 237, @ENDER + 23, 189, 0, 0, 1, 1, 0, 1972.992, -432.858, 6.261, 2.985, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery, check position in-game'),
-(@GUID + 238, @ENDER + 23, 189, 0, 0, 1, 1, 0, 1153.87, 1398.39, 32.611, 0.014, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery, check position in-game');
+(@GUID + 235, @ENDER + 23, 189, 0, 0, 1, 1, 0, 1809.6632, 1428.6112, -8.797188, 4.847003, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery'),
+(@GUID + 236, @ENDER + 23, 189, 0, 0, 1, 1, 0, 138.82019, -418.83267, 18.504541, 5.616691, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery'),
+(@GUID + 237, @ENDER + 23, 189, 0, 0, 1, 1, 0, 1981.1577, -431.5735, 11.272326, 3.173007, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery, check position in-game'),
+(@GUID + 238, @ENDER + 23, 189, 0, 0, 1, 1, 0, 1163.5769, 1418.0734, 31.96639, 4.097159, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Scarlet Monastery');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 23, 3978), -- Sage Truthseeker
@@ -604,10 +604,10 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 23;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 830, @PORTAL + 23, 189, 0, 0, 1, 1, 1828.287, 1419.850, -9.667, 3.159, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery'),
-(@GUID + 831, @PORTAL + 23, 189, 0, 0, 1, 1, 173.826, -424.503, 16.866, 3.188, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery'),
-(@GUID + 832, @PORTAL + 23, 189, 0, 0, 1, 1, 1973.460, -429.895, 4.511, 2.985, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery'),
-(@GUID + 833, @PORTAL + 23, 189, 0, 0, 1, 1, 1153.912, 1395.390, 30.861, 0.014, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery');
+(@GUID + 830, @PORTAL + 23, 189, 0, 0, 1, 1, 1806.690, 1428.209, -8.797, 4.847, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery'),
+(@GUID + 831, @PORTAL + 23, 189, 0, 0, 1, 1, 136.965, -421.191, 18.505, 5.617, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery'),
+(@GUID + 832, @PORTAL + 23, 189, 0, 0, 1, 1, 1981.063, -428.575, 11.272, 3.173, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery'),
+(@GUID + 833, @PORTAL + 23, 189, 0, 0, 1, 1, 1161.127, 1419.805, 31.966, 4.097, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scarlet Monastery');
 
 -- -------------------------------------------------------------------------
 -- Uldaman   -   dungeon 24
@@ -669,7 +669,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 24;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 840, @PORTAL + 24, 70, 0, 0, 1, 1, 105.619, 254.892, -53.450, 1.472, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Uldaman');
+(@GUID + 840, @PORTAL + 24, 70, 0, 0, 1, 1, 105.619, 254.892, -51.700, 1.472, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Uldaman');
 
 -- -------------------------------------------------------------------------
 -- Zul'Farrak   -   dungeon 25
@@ -693,7 +693,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 251, @GIVER + 25, 209, 0, 0, 1, 1, 0, 1216.464, 841.014, 8.93, 2.948, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Zul''Farrak'),
-(@GUID + 252, @ENDER + 25, 209, 0, 0, 1, 1, 0, 1762.87, 1014.21, 53.487, 3.053, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Zul''Farrak, check position in-game');
+(@GUID + 252, @ENDER + 25, 209, 0, 0, 1, 1, 0, 1752.6969, 1008.89233, 53.487, 1.562724, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Zul''Farrak, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 25, 7407), -- Chief Engineer Bilgewhizzle
@@ -708,7 +708,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 25;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 850, @PORTAL + 25, 209, 0, 0, 1, 1, 1763.135, 1017.198, 51.737, 3.053, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Zul''Farrak');
+(@GUID + 850, @PORTAL + 25, 209, 0, 0, 1, 1, 1755.697, 1008.868, 53.487, 1.563, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Zul''Farrak');
 
 -- -------------------------------------------------------------------------
 -- Maraudon   -   dungeon 26
@@ -749,7 +749,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 26;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 860, @PORTAL + 26, 349, 0, 0, 1, 1, 27.583, 115.791, -132.823, 4.630, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Maraudon');
+(@GUID + 860, @PORTAL + 26, 349, 0, 0, 1, 1, 27.583, 115.791, -131.073, 4.630, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Maraudon');
 
 -- -------------------------------------------------------------------------
 -- Sunken Temple   -   dungeon 27
@@ -799,7 +799,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 27;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 870, @PORTAL + 27, 109, 0, 0, 1, 1, -655.338, -43.746, -92.585, 1.576, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Sunken Temple');
+(@GUID + 870, @PORTAL + 27, 109, 0, 0, 1, 1, -655.338, -43.746, -90.835, 1.576, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Sunken Temple');
 
 -- -------------------------------------------------------------------------
 -- Dire Maul   -   dungeon 29
@@ -855,9 +855,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `p
 (@GUID + 294, @GIVER + 29, 429, 0, 0, 1, 1, 0, -65.966, 159.848, -3.462, 0.006, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Dire Maul'),
 (@GUID + 295, @GIVER + 29, 429, 0, 0, 1, 1, 0, 34.561, 159.48, -3.478, 3.152, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Dire Maul'),
 (@GUID + 296, @GIVER + 29, 429, 0, 0, 1, 1, 0, 255.212, -19.056, -2.587, 1.558, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Dire Maul'),
-(@GUID + 297, @ENDER + 29, 429, 0, 0, 1, 1, 0, 262.974, -442.555, -119.962, 0.911, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Dire Maul, check position in-game'),
+(@GUID + 297, @ENDER + 29, 429, 0, 0, 1, 1, 0, 253.43103, -423.8473, -119.962, 4.808383, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Dire Maul, check position in-game'),
 (@GUID + 298, @ENDER + 29, 429, 0, 0, 1, 1, 0, 133.323, 633.883, -48.384, 4.625, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Dire Maul, check position in-game'),
-(@GUID + 299, @ENDER + 29, 429, 0, 0, 1, 1, 0, 833.995, 489.543, 37.401, 4.12, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Dire Maul, check position in-game');
+(@GUID + 299, @ENDER + 29, 429, 0, 0, 1, 1, 0, 812.3387, 506.14395, 37.31824, 4.717626, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Dire Maul, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 29, 16032), -- Falrin Treeshaper
@@ -872,9 +872,9 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 29;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 890, @PORTAL + 29, 429, 0, 0, 1, 1, 265.344, -444.394, -121.712, 0.911, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Dire Maul'),
-(@GUID + 891, @PORTAL + 29, 429, 0, 0, 1, 1, 130.334, 634.145, -50.134, 4.625, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Dire Maul'),
-(@GUID + 892, @PORTAL + 29, 429, 0, 0, 1, 1, 831.506, 491.218, 35.651, 4.120, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Dire Maul');
+(@GUID + 890, @PORTAL + 29, 429, 0, 0, 1, 1, 250.445, -424.135, -119.962, 4.808, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Dire Maul'),
+(@GUID + 891, @PORTAL + 29, 429, 0, 0, 1, 1, 130.334, 634.145, -48.384, 4.625, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Dire Maul'),
+(@GUID + 892, @PORTAL + 29, 429, 0, 0, 1, 1, 809.339, 506.128, 37.318, 4.718, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Dire Maul');
 
 -- -------------------------------------------------------------------------
 -- Scholomance   -   dungeon 30
@@ -957,7 +957,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 30;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 900, @PORTAL + 30, 289, 0, 0, 1, 1, 196.098, -9.652, 73.896, 2.683, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scholomance');
+(@GUID + 900, @PORTAL + 30, 289, 0, 0, 1, 1, 196.098, -9.652, 75.646, 2.683, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Scholomance');
 
 -- -------------------------------------------------------------------------
 -- Stratholme   -   dungeon 31
@@ -1037,8 +1037,8 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 311, @GIVER + 31, 329, 0, 0, 1, 1, 0, 3594.887, -3649.006, 138.5, 2.188, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Stratholme'),
 (@GUID + 312, @GIVER + 31, 329, 0, 0, 1, 1, 0, 3398.075, -3379.95, 142.702, 3.242, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Stratholme'),
-(@GUID + 313, @ENDER + 31, 329, 0, 0, 1, 1, 0, 3423.47, -3055.73, 136.581, 2.169, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Stratholme, check position in-game'),
-(@GUID + 314, @ENDER + 31, 329, 0, 0, 1, 1, 0, 4044.05, -3334.55, 115.54, 3.353, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Stratholme, check position in-game');
+(@GUID + 313, @ENDER + 31, 329, 0, 0, 1, 1, 0, 3410.9329, -3060.1743, 136.51038, 0.212712, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Stratholme, check position in-game'),
+(@GUID + 314, @ENDER + 31, 329, 0, 0, 1, 1, 0, 4022.2688, -3335.2256, 115.05917, 5.284855, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Stratholme, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 31, 10917), -- Aurius
@@ -1053,8 +1053,8 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 31;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 910, @PORTAL + 31, 329, 0, 0, 1, 1, 3425.949, -3054.041, 134.831, 2.169, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Stratholme'),
-(@GUID + 911, @PORTAL + 31, 329, 0, 0, 1, 1, 4043.420, -3331.617, 113.790, 3.353, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Stratholme');
+(@GUID + 910, @PORTAL + 31, 329, 0, 0, 1, 1, 3411.566, -3063.107, 136.510, 0.213, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Stratholme'),
+(@GUID + 911, @PORTAL + 31, 329, 0, 0, 1, 1, 4019.747, -3336.851, 115.059, 5.285, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Stratholme');
 
 -- =========================================================================
 -- Classic (10 man)
@@ -1168,8 +1168,8 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 281, @GIVER + 28, 229, 0, 0, 1, 1, 0, 79.642, -227.821, 49.839, 1.958, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Blackrock Spire'),
-(@GUID + 282, @ENDER + 28, 229, 0, 0, 1, 1, 0, -43.559, -515.171, 88.587, 0.945, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackrock Spire, check position in-game'),
-(@GUID + 283, @ENDER + 28, 229, 0, 0, 1, 1, 0, 31.706, -293.848, 110.947, 1.027, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackrock Spire, check position in-game');
+(@GUID + 282, @ENDER + 28, 229, 0, 0, 1, 1, 0, -24.665913, -467.59708, 90.9931, 4.354599, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackrock Spire, check position in-game'),
+(@GUID + 283, @ENDER + 28, 229, 0, 0, 1, 1, 0, 37.73191, -297.50076, 110.954636, 2.435169, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Blackrock Spire, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 28, 9046), -- Scarshield Quartermaster
@@ -1184,8 +1184,8 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 28;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 880, @PORTAL + 28, 229, 0, 0, 1, 1, -41.128, -516.928, 86.837, 0.945, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackrock Spire'),
-(@GUID + 881, @PORTAL + 28, 229, 0, 0, 1, 1, 34.273, -295.400, 109.197, 1.027, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackrock Spire');
+(@GUID + 880, @PORTAL + 28, 229, 0, 0, 1, 1, -27.476, -466.546, 90.993, 4.355, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackrock Spire'),
+(@GUID + 881, @PORTAL + 28, 229, 0, 0, 1, 1, 39.679, -295.219, 110.955, 2.435, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Blackrock Spire');
 
 -- =========================================================================
 -- The Burning Crusade (5 man)
@@ -1222,7 +1222,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 3;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 630, @PORTAL + 3, 542, 0, 0, 1, 1, 356.319, -138.858, -27.210, 2.174, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Blood Furnace');
+(@GUID + 630, @PORTAL + 3, 542, 0, 0, 1, 1, 356.319, -138.858, -25.460, 2.174, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Blood Furnace');
 
 -- -------------------------------------------------------------------------
 -- Coilfang Reservoir   -   dungeon 4
@@ -1249,9 +1249,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `p
 (@GUID + 41, @GIVER + 4, 547, 0, 0, 3, 1, 0, 130.725, -121.744, -1.591, 4.137, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Coilfang Reservoir'),
 (@GUID + 42, @GIVER + 4, 546, 0, 0, 3, 1, 0, 19.265, -31.758, -2.751, 2.067, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Coilfang Reservoir'),
 (@GUID + 43, @GIVER + 4, 545, 0, 0, 3, 1, 0, -13.432, 4.975, -4.262, 5.834, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Coilfang Reservoir'),
-(@GUID + 44, @ENDER + 4, 547, 0, 0, 3, 1, 0, -288.346, -663.757, 9.402, 5.847, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Coilfang Reservoir, check position in-game'),
-(@GUID + 45, @ENDER + 4, 546, 0, 0, 3, 1, 0, 146.481, -4.13, 26.16, 1.797, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Coilfang Reservoir, check position in-game'),
-(@GUID + 46, @ENDER + 4, 545, 0, 0, 3, 1, 0, -107.059, -543.903, 8.27, 5.674, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Coilfang Reservoir, check position in-game');
+(@GUID + 44, @ENDER + 4, 547, 0, 0, 3, 1, 0, -292.66937, -632.1297, 37.097992, 5.211121, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Coilfang Reservoir, check position in-game'),
+(@GUID + 45, @ENDER + 4, 546, 0, 0, 3, 1, 0, 149.8875, 42.617092, 27.079924, 4.696674, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Coilfang Reservoir, check position in-game'),
+(@GUID + 46, @ENDER + 4, 545, 0, 0, 3, 1, 0, -87.2726, -576.1782, 8.186956, 1.783946, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Coilfang Reservoir, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 4, 17884), -- Watcher Jhang
@@ -1266,9 +1266,9 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 4;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 640, @PORTAL + 4, 547, 0, 0, 1, 1, -289.613, -666.476, 7.652, 5.847, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Coilfang Reservoir'),
-(@GUID + 641, @PORTAL + 4, 546, 0, 0, 1, 1, 149.405, -3.457, 24.410, 1.797, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Coilfang Reservoir'),
-(@GUID + 642, @PORTAL + 4, 545, 0, 0, 1, 1, -108.776, -546.363, 6.520, 5.674, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Coilfang Reservoir');
+(@GUID + 640, @PORTAL + 4, 547, 0, 0, 1, 1, -295.304, -633.565, 37.098, 5.211, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Coilfang Reservoir'),
+(@GUID + 641, @PORTAL + 4, 546, 0, 0, 1, 1, 146.888, 42.664, 27.080, 4.697, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Coilfang Reservoir'),
+(@GUID + 642, @PORTAL + 4, 545, 0, 0, 1, 1, -84.340, -575.544, 8.187, 1.784, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Coilfang Reservoir');
 
 -- -------------------------------------------------------------------------
 -- Mana-Tombs   -   dungeon 5
@@ -1286,7 +1286,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 51, @GIVER + 5, 557, 0, 0, 3, 1, 0, -6.362, 5.497, -0.954, 5.986, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Mana-Tombs'),
-(@GUID + 52, @ENDER + 5, 557, 0, 0, 3, 1, 0, -210.438, -15.873, 16.946, 0.769, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Mana-Tombs, check position in-game');
+(@GUID + 52, @ENDER + 5, 557, 0, 0, 3, 1, 0, -143.25383, 9.806555, 16.792788, 3.148134, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Mana-Tombs, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 5, 19674), -- Nexus-Prince Haramad
@@ -1301,7 +1301,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 5;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 650, @PORTAL + 5, 557, 0, 0, 1, 1, -208.352, -18.029, 15.196, 0.769, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Mana-Tombs');
+(@GUID + 650, @PORTAL + 5, 557, 0, 0, 1, 1, -143.273, 12.806, 16.793, 3.148, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Mana-Tombs');
 
 -- -------------------------------------------------------------------------
 -- Auchenai Crypts   -   dungeon 6
@@ -1318,7 +1318,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 61, @GIVER + 6, 558, 0, 0, 3, 1, 0, -12.563, 5.425, -0.121, 3.543, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Auchenai Crypts'),
-(@GUID + 62, @ENDER + 6, 558, 0, 0, 3, 1, 0, 65.912, -364.311, 26.587, 3.841, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Auchenai Crypts');
+(@GUID + 62, @ENDER + 6, 558, 0, 0, 3, 1, 0, 87.702, -387.49893, 26.590649, 3.220784, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Auchenai Crypts');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 6, 18687), -- Mother Kashur
@@ -1333,7 +1333,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 6;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 660, @PORTAL + 6, 558, 0, 0, 1, 1, 63.981, -362.015, 24.837, 3.841, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Auchenai Crypts');
+(@GUID + 660, @PORTAL + 6, 558, 0, 0, 1, 1, 87.465, -384.508, 26.591, 3.221, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Auchenai Crypts');
 
 -- -------------------------------------------------------------------------
 -- Sethekk Halls   -   dungeon 7
@@ -1350,7 +1350,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 71, @GIVER + 7, 556, 0, 0, 3, 1, 0, -1.08, -6.467, 0.006, 1.484, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Sethekk Halls'),
-(@GUID + 72, @ENDER + 7, 556, 0, 0, 3, 1, 0, 24.415, 293.476, 25.136, 5.973, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Sethekk Halls, check position in-game');
+(@GUID + 72, @ENDER + 7, 556, 0, 0, 3, 1, 0, 80.13596, 287.43195, 26.62932, 3.128284, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Sethekk Halls, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 7, 18933), -- Isfar
@@ -1365,7 +1365,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 7;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 670, @PORTAL + 7, 556, 0, 0, 1, 1, 23.499, 290.619, 23.386, 5.973, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Sethekk Halls');
+(@GUID + 670, @PORTAL + 7, 556, 0, 0, 1, 1, 80.176, 290.432, 26.629, 3.128, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Sethekk Halls');
 
 -- -------------------------------------------------------------------------
 -- The Black Morass   -   dungeon 8
@@ -1400,7 +1400,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 8;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 680, @PORTAL + 8, 269, 0, 0, 1, 1, -2034.842, 7137.171, 20.977, 5.059, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Black Morass');
+(@GUID + 680, @PORTAL + 8, 269, 0, 0, 1, 1, -2034.842, 7137.171, 22.727, 5.059, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Black Morass');
 
 -- -------------------------------------------------------------------------
 -- Shadow Labyrinth   -   dungeon 9
@@ -1424,7 +1424,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 91, @GIVER + 9, 555, 0, 0, 3, 1, 0, -2.74, -5.946, -1.128, 1.566, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Shadow Labyrinth'),
-(@GUID + 92, @ENDER + 9, 555, 0, 0, 3, 1, 0, -146.998, -461.135, 17.077, 2.012, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Shadow Labyrinth');
+(@GUID + 92, @ENDER + 9, 555, 0, 0, 3, 1, 0, -129.43724, -521.1356, 17.077324, 2.531599, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Shadow Labyrinth');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 9, 18891), -- Spy Togun
@@ -1439,7 +1439,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 9;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 690, @PORTAL + 9, 555, 0, 0, 1, 1, -144.285, -459.854, 15.327, 2.012, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Shadow Labyrinth');
+(@GUID + 690, @PORTAL + 9, 555, 0, 0, 1, 1, -127.719, -518.677, 17.077, 2.532, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Shadow Labyrinth');
 
 -- -------------------------------------------------------------------------
 -- The Shattered Halls   -   dungeon 10
@@ -1461,7 +1461,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 101, @GIVER + 10, 540, 0, 0, 3, 1, 0, -39.541, -17.065, -13.806, 4.253, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Shattered Halls'),
-(@GUID + 102, @ENDER + 10, 540, 0, 0, 3, 1, 0, 223.158, -83.872, 5.023, 0.028, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Shattered Halls, check position in-game');
+(@GUID + 102, @ENDER + 10, 540, 0, 0, 3, 1, 0, 178.38406, -83.87494, 2.150183, 0.064139, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Shattered Halls, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 10, 16819), -- Force Commander Danath Trollbane
@@ -1476,7 +1476,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 10;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 700, @PORTAL + 10, 540, 0, 0, 1, 1, 223.242, -86.871, 3.273, 0.028, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Shattered Halls');
+(@GUID + 700, @PORTAL + 10, 540, 0, 0, 1, 1, 178.576, -86.869, 2.150, 0.064, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Shattered Halls');
 
 -- -------------------------------------------------------------------------
 -- The Arcatraz   -   dungeon 11
@@ -1509,7 +1509,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 11;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 710, @PORTAL + 11, 552, 0, 0, 1, 1, 449.150, -178.895, 41.894, 1.606, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Arcatraz');
+(@GUID + 710, @PORTAL + 11, 552, 0, 0, 1, 1, 449.150, -178.895, 43.644, 1.606, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Arcatraz');
 
 -- -------------------------------------------------------------------------
 -- The Botanica   -   dungeon 12
@@ -1542,7 +1542,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 12;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 720, @PORTAL + 12, 553, 0, 0, 1, 1, 100.250, 383.838, -29.160, 2.689, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Botanica');
+(@GUID + 720, @PORTAL + 12, 553, 0, 0, 1, 1, 100.250, 383.838, -27.410, 2.689, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Botanica');
 
 -- -------------------------------------------------------------------------
 -- The Mechanar   -   dungeon 13
@@ -1558,7 +1558,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 131, @GIVER + 13, 554, 0, 0, 3, 1, 0, -22.967, 8.781, -1.813, 4.175, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Mechanar'),
-(@GUID + 132, @ENDER + 13, 554, 0, 0, 3, 1, 0, 140.828, 112.036, 26.457, 1.605, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Mechanar, check position in-game');
+(@GUID + 132, @ENDER + 13, 554, 0, 0, 3, 1, 0, 100.47248, 151.79721, 25.604559, 6.110178, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Mechanar, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 13, 21465), -- David Wayne
@@ -1573,7 +1573,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 13;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 730, @PORTAL + 13, 554, 0, 0, 1, 1, 143.826, 112.139, 24.707, 1.605, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Mechanar');
+(@GUID + 730, @PORTAL + 13, 554, 0, 0, 1, 1, 99.956, 148.842, 25.605, 6.110, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Mechanar');
 
 -- -------------------------------------------------------------------------
 -- Hellfire Ramparts   -   dungeon 32
@@ -1591,7 +1591,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 321, @GIVER + 32, 543, 0, 0, 3, 1, 0, -1352.886, 1642.98, 68.249, 3.81, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Hellfire Ramparts'),
-(@GUID + 322, @ENDER + 32, 543, 0, 0, 3, 1, 0, -1386.373, 1697.071, 104.065, 0.148, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Hellfire Ramparts, check position in-game');
+(@GUID + 322, @ENDER + 32, 543, 0, 0, 3, 1, 0, -1436.3038, 1767.0138, 82.045494, 5.507824, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Hellfire Ramparts, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 32, 17493), -- Stone Guard Stokton
@@ -1606,7 +1606,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 32;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 920, @PORTAL + 32, 543, 0, 0, 1, 1, -1385.931, 1694.104, 102.315, 0.148, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Hellfire Ramparts');
+(@GUID + 920, @PORTAL + 32, 543, 0, 0, 1, 1, -1438.404, 1764.871, 82.045, 5.508, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Hellfire Ramparts');
 
 -- -------------------------------------------------------------------------
 -- Old Hillsbrad Foothills   -   dungeon 33
@@ -1625,7 +1625,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 331, @GIVER + 33, 560, 0, 0, 3, 1, 0, 2738.919, 1315.791, 14.042, 6.102, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Old Hillsbrad Foothills'),
-(@GUID + 332, @ENDER + 33, 560, 0, 0, 3, 1, 0, 2655.61, 663.915, 57.172, 5.586, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Old Hillsbrad Foothills, check position in-game');
+(@GUID + 332, @ENDER + 33, 560, 0, 0, 3, 1, 0, 2647.5127, 649.41296, 56.110313, 2.072142, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Old Hillsbrad Foothills, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 33, 18887), -- Taretha
@@ -1640,7 +1640,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 33;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 930, @PORTAL + 33, 560, 0, 0, 1, 1, 2653.684, 661.615, 55.422, 5.586, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Old Hillsbrad Foothills');
+(@GUID + 930, @PORTAL + 33, 560, 0, 0, 1, 1, 2650.144, 650.855, 56.110, 2.072, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Old Hillsbrad Foothills');
 
 -- -------------------------------------------------------------------------
 -- Magisters' Terrace   -   dungeon 34
@@ -1657,7 +1657,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 341, @GIVER + 34, 585, 0, 0, 3, 1, 0, 10.086, -0.3, -2.8, 3.192, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Magisters'' Terrace'),
-(@GUID + 342, @ENDER + 34, 585, 0, 0, 3, 1, 0, 151.475, 146.126, -14.298, 1.642, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Magisters'' Terrace, check position in-game');
+(@GUID + 342, @ENDER + 34, 585, 0, 0, 3, 1, 0, 147.62064, 198.13785, -11.957967, 1.401065, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Magisters'' Terrace, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 34, 24813), -- Exarch Larethor
@@ -1672,7 +1672,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 34;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 940, @PORTAL + 34, 585, 0, 0, 1, 1, 154.467, 146.339, -16.048, 1.642, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Magisters'' Terrace');
+(@GUID + 940, @PORTAL + 34, 585, 0, 0, 1, 1, 150.578, 197.631, -11.958, 1.401, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Magisters'' Terrace');
 
 -- =========================================================================
 -- Wrath of the Lich King (5 man)
@@ -1695,7 +1695,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 351, @GIVER + 35, 574, 0, 0, 3, 1, 0, 156.651, -85.65, 12.551, 3.446, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Utgarde Keep'),
-(@GUID + 352, @ENDER + 35, 574, 0, 0, 3, 1, 0, 243.877, -352.606, 184.951, 1.634, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Utgarde Keep, check position in-game');
+(@GUID + 352, @ENDER + 35, 574, 0, 0, 3, 1, 0, 216.932, -336.13345, 180.45308, 1.043706, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Utgarde Keep, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 35, 24111), -- Defender Mordun
@@ -1710,7 +1710,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 35;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 950, @PORTAL + 35, 574, 0, 0, 1, 1, 246.871, -352.417, 183.201, 1.634, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Utgarde Keep');
+(@GUID + 950, @PORTAL + 35, 574, 0, 0, 1, 1, 219.525, -337.643, 180.453, 1.044, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Utgarde Keep');
 
 -- -------------------------------------------------------------------------
 -- Utgarde Pinnacle   -   dungeon 36
@@ -1726,7 +1726,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 361, @GIVER + 36, 575, 0, 0, 3, 1, 0, 581.118, -327.915, 110.138, 6.264, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Utgarde Pinnacle'),
-(@GUID + 362, @ENDER + 36, 575, 0, 0, 3, 1, 0, 413.959, -314.937, 107.288, 2.215, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Utgarde Pinnacle, check position in-game');
+(@GUID + 362, @ENDER + 36, 575, 0, 0, 3, 1, 0, 431.21622, -312.79608, 104.76195, 3.70402, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Utgarde Pinnacle, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 36, 30871), -- Brigg Smallshanks
@@ -1741,7 +1741,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 36;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 960, @PORTAL + 36, 575, 0, 0, 1, 1, 416.358, -313.135, 105.538, 2.215, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Utgarde Pinnacle');
+(@GUID + 960, @PORTAL + 36, 575, 0, 0, 1, 1, 429.616, -310.258, 104.762, 3.704, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Utgarde Pinnacle');
 
 -- -------------------------------------------------------------------------
 -- The Nexus   -   dungeon 37
@@ -1775,7 +1775,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 37;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 970, @PORTAL + 37, 576, 0, 0, 1, 1, 290.197, -21.772, -18.316, 0.815, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Nexus');
+(@GUID + 970, @PORTAL + 37, 576, 0, 0, 1, 1, 290.197, -21.772, -16.566, 0.815, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Nexus');
 
 -- -------------------------------------------------------------------------
 -- The Oculus   -   dungeon 38
@@ -1793,7 +1793,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 381, @GIVER + 38, 578, 0, 0, 3, 1, 0, 1058.506, 985.312, 361.07, 2.603, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Oculus'),
-(@GUID + 382, @ENDER + 38, 578, 0, 0, 3, 1, 0, 1015.06, 1051.09, 605.619, 3.159, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Oculus, check position in-game');
+(@GUID + 382, @ENDER + 38, 578, 0, 0, 3, 1, 0, 1021.86224, 1059.2532, 605.6263, 4.967203, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Oculus, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 38, 27658), -- Belgaristrasz
@@ -1808,7 +1808,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 38;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 980, @PORTAL + 38, 578, 0, 0, 1, 1, 1015.008, 1054.090, 603.869, 3.159, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Oculus');
+(@GUID + 980, @PORTAL + 38, 578, 0, 0, 1, 1, 1018.959, 1058.497, 605.626, 4.967, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Oculus');
 
 -- -------------------------------------------------------------------------
 -- Azjol-Nerub   -   dungeon 39
@@ -1824,7 +1824,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 391, @GIVER + 39, 601, 0, 0, 3, 1, 0, 415.44, 793.851, 831.351, 2.358, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Azjol-Nerub'),
-(@GUID + 392, @ENDER + 39, 601, 0, 0, 3, 1, 0, 551.018, 240.278, 223.972, 1.571, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Azjol-Nerub, check position in-game');
+(@GUID + 392, @ENDER + 39, 601, 0, 0, 3, 1, 0, 548.64215, 160.77498, 196.31625, 1.511674, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Azjol-Nerub, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 39, 26653), -- Kilix the Unraveler
@@ -1839,7 +1839,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 39;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 990, @PORTAL + 39, 601, 0, 0, 1, 1, 554.018, 240.279, 222.222, 1.571, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Azjol-Nerub');
+(@GUID + 990, @PORTAL + 39, 601, 0, 0, 1, 1, 551.637, 160.598, 196.316, 1.512, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Azjol-Nerub');
 
 -- -------------------------------------------------------------------------
 -- Ahn'kahet   -   dungeon 40
@@ -1854,8 +1854,8 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 (@ENDER + 40, 13204); -- Funky Fungi
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
-(@GUID + 401, @GIVER + 40, 619, 0, 0, 3, 1, 0, 335.904, -1108.364, 69.772, 3.695, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Ahn''kahet'),
-(@GUID + 402, @ENDER + 40, 619, 0, 0, 3, 1, 0, 519.773, -433.814, 26.439, 4.73, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Ahn''kahet, check position in-game');
+(@GUID + 401, @GIVER + 40, 619, 0, 0, 3, 1, 0, 370.27618, -1087.4104, 47.360714, 3.699443, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Ahn''kahet'),
+(@GUID + 402, @ENDER + 40, 619, 0, 0, 3, 1, 0, 522.61395, -363.38873, 45.946663, 4.677918, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Ahn''kahet, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 40, 26653), -- Kilix the Unraveler
@@ -1870,7 +1870,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 40;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1000, @PORTAL + 40, 619, 0, 0, 1, 1, 516.773, -433.867, 24.689, 4.730, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Ahn''kahet');
+(@GUID + 1000, @PORTAL + 40, 619, 0, 0, 1, 1, 519.616, -363.285, 45.947, 4.678, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Ahn''kahet');
 
 -- -------------------------------------------------------------------------
 -- Drak'Tharon Keep   -   dungeon 41
@@ -1887,7 +1887,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 411, @GIVER + 41, 600, 0, 0, 3, 1, 0, -516.988, -490.955, 11.01, 1.689, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Drak''Tharon Keep'),
-(@GUID + 412, @ENDER + 41, 600, 0, 0, 3, 1, 0, -237.131, -698.678, 131.255, 1.558, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Drak''Tharon Keep, check position in-game');
+(@GUID + 412, @ENDER + 41, 600, 0, 0, 3, 1, 0, -235.46774, -623.4009, 116.48491, 4.682502, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Drak''Tharon Keep, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 41, 26604), -- Mack Fearsen
@@ -1902,7 +1902,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 41;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1010, @PORTAL + 41, 600, 0, 0, 1, 1, -234.131, -698.716, 129.505, 1.558, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Drak''Tharon Keep');
+(@GUID + 1010, @PORTAL + 41, 600, 0, 0, 1, 1, -238.466, -623.311, 116.485, 4.683, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Drak''Tharon Keep');
 
 -- -------------------------------------------------------------------------
 -- The Violet Hold   -   dungeon 42
@@ -1918,7 +1918,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 421, @GIVER + 42, 608, 0, 0, 3, 1, 0, 1811.82, 803.926, 44.364, 3.14, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Violet Hold'),
-(@GUID + 422, @ENDER + 42, 608, 0, 0, 3, 1, 0, 1907.28, 802.305, 38.646, 6.217, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Violet Hold, check position in-game');
+(@GUID + 422, @ENDER + 42, 608, 0, 0, 3, 1, 0, 1839.4908, 788.94214, 44.202053, 1.351751, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Violet Hold, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 42, 30658), -- Lieutenant Sinclari
@@ -1933,7 +1933,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 42;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1020, @PORTAL + 42, 608, 0, 0, 1, 1, 1907.082, 799.312, 36.896, 6.217, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Violet Hold');
+(@GUID + 1020, @PORTAL + 42, 608, 0, 0, 1, 1, 1842.419, 788.290, 44.202, 1.352, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Violet Hold');
 
 -- -------------------------------------------------------------------------
 -- Gundrak   -   dungeon 43
@@ -1951,7 +1951,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 431, @GIVER + 43, 604, 0, 0, 3, 1, 0, 1890.302, 834.745, 176.669, 5.251, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Gundrak'),
 (@GUID + 432, @GIVER + 43, 604, 0, 0, 3, 1, 0, 1879.32, 631.027, 176.696, 6.283, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Gundrak'),
-(@GUID + 433, @ENDER + 43, 604, 0, 0, 3, 1, 0, 1887.56, 742.878, 136.184, 0.029, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Gundrak, check position in-game');
+(@GUID + 433, @ENDER + 43, 604, 0, 0, 3, 1, 0, 1949.809, 703.27325, 135.93068, 2.735156, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Gundrak, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 43, 30676), -- Chronicler BahKini
@@ -1966,7 +1966,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 43;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1030, @PORTAL + 43, 604, 0, 0, 1, 1, 1887.647, 739.879, 134.434, 0.029, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Gundrak');
+(@GUID + 1030, @PORTAL + 43, 604, 0, 0, 1, 1, 1950.995, 706.029, 135.931, 2.735, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Gundrak');
 
 -- -------------------------------------------------------------------------
 -- Halls of Stone   -   dungeon 44
@@ -1993,7 +1993,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 44;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1040, @PORTAL + 44, 599, 0, 0, 1, 1, 1303.042, 670.572, 187.941, 3.194, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Halls of Stone');
+(@GUID + 1040, @PORTAL + 44, 599, 0, 0, 1, 1, 1303.042, 670.572, 189.691, 3.194, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Halls of Stone');
 
 -- -------------------------------------------------------------------------
 -- Halls of Lightning   -   dungeon 45
@@ -2009,7 +2009,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 451, @GIVER + 45, 602, 0, 0, 3, 1, 0, 1331.649, 256.624, 53.398, 1.63, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Halls of Lightning'),
-(@GUID + 452, @ENDER + 45, 602, 0, 0, 3, 1, 0, 1189.8, 82.713, 60.813, 4.644, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Halls of Lightning, check position in-game');
+(@GUID + 452, @ENDER + 45, 602, 0, 0, 3, 1, 0, 1194.3287, 68.05104, 60.729923, 3.827723, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Halls of Lightning, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 45, 30382), -- Brann Bronzebeard
@@ -2024,7 +2024,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 45;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1050, @PORTAL + 45, 602, 0, 0, 1, 1, 1186.807, 82.918, 59.063, 4.644, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Halls of Lightning');
+(@GUID + 1050, @PORTAL + 45, 602, 0, 0, 1, 1, 1192.428, 70.372, 60.730, 3.828, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Halls of Lightning');
 
 -- -------------------------------------------------------------------------
 -- The Culling of Stratholme   -   dungeon 46
@@ -2040,7 +2040,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 461, @GIVER + 46, 595, 0, 0, 3, 1, 0, 1432.398, 554.216, 36.69, 2.018, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Culling of Stratholme'),
-(@GUID + 462, @ENDER + 46, 595, 0, 0, 3, 1, 0, 2301.92, 1446.75, 128.868, 1.18, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Culling of Stratholme, check position in-game');
+(@GUID + 462, @ENDER + 46, 595, 0, 0, 3, 1, 0, 2294.5947, 1506.8448, 128.734, 5.135635, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Culling of Stratholme, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 46, 26527), -- Chromie
@@ -2055,7 +2055,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 46;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1060, @PORTAL + 46, 595, 0, 0, 1, 1, 2304.694, 1445.607, 127.118, 1.180, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Culling of Stratholme');
+(@GUID + 1060, @PORTAL + 46, 595, 0, 0, 1, 1, 2291.859, 1505.613, 128.734, 5.136, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Culling of Stratholme');
 
 -- -------------------------------------------------------------------------
 -- The Forge of Souls   -   dungeon 48
@@ -2076,7 +2076,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 481, @GIVER + 48, 632, 0, 0, 3, 1, 0, 4921.602, 2178.353, 638.734, 5.145, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - The Forge of Souls'),
-(@GUID + 482, @ENDER + 48, 632, 0, 0, 3, 1, 0, 5666.452, 2513.862, 708.912, 4.084, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Forge of Souls, check position in-game');
+(@GUID + 482, @ENDER + 48, 632, 0, 0, 3, 1, 0, 5679.851, 2526.6592, 714.6916, 0.806562, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - The Forge of Souls, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 48, 37597), -- Lady Jaina Proudmoore
@@ -2091,7 +2091,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 48;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1080, @PORTAL + 48, 632, 0, 0, 1, 1, 5664.025, 2515.626, 707.162, 4.084, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Forge of Souls');
+(@GUID + 1080, @PORTAL + 48, 632, 0, 0, 1, 1, 5682.017, 2524.583, 714.692, 0.807, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - The Forge of Souls');
 
 -- -------------------------------------------------------------------------
 -- Pit of Saron   -   dungeon 49
@@ -2115,7 +2115,7 @@ INSERT INTO `creature_questender` (`id`, `quest`) VALUES
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@GUID + 491, @GIVER + 49, 658, 0, 0, 3, 1, 0, 438.742, 212.333, 528.709, 3.115, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest giver - Pit of Saron'),
-(@GUID + 492, @ENDER + 49, 658, 0, 0, 3, 1, 0, 1071.27, 38.016, 629.829, 1.573, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Pit of Saron, check position in-game');
+(@GUID + 492, @ENDER + 49, 658, 0, 0, 3, 1, 0, 1067.3254, 55.056316, 631.68146, 1.650641, 300, 0, 0, 1, 0, 0, 0, 0, 0, '', NULL, 0, 'Dungeon Quest turn-in - Pit of Saron, check position in-game');
 
 INSERT INTO `tmp_dungeon_quest_theme` (`npc`, `theme`) VALUES
 (@GIVER + 49, 36624), -- Caladis Brightspear
@@ -2130,7 +2130,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 49;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1090, @PORTAL + 49, 658, 0, 0, 1, 1, 1074.270, 38.023, 628.079, 1.573, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Pit of Saron');
+(@GUID + 1090, @PORTAL + 49, 658, 0, 0, 1, 1, 1070.316, 55.296, 631.681, 1.651, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Pit of Saron');
 
 -- -------------------------------------------------------------------------
 -- Halls of Reflection   -   dungeon 50
@@ -2167,7 +2167,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 
 DELETE FROM `gameobject` WHERE `id` = @PORTAL + 50;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`, `Comment`) VALUES
-(@GUID + 1100, @PORTAL + 50, 668, 0, 0, 1, 1, 5377.836, 1817.350, 758.379, 3.956, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Halls of Reflection');
+(@GUID + 1100, @PORTAL + 50, 668, 0, 0, 1, 1, 5377.836, 1817.350, 760.129, 3.956, 0, 0, 0, 1, 120, 100, 1, '', 0, 'DungeonQuestNPC return portal - Halls of Reflection');
 
 -- Blackrock Depths
 
